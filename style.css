@@ -184,16 +184,15 @@ nav,
 }
 
 .dark-theme .mail__btn {
-  background-color: white;
-  color: #242424;
+ 
+background-color: #86868d;
+    filter: invert(100%);
 }
 
 
 
 .dark-theme .stamp {
- /* filter: none;*/
-    background-color: black;
-    color: white;
+
     filter: invert(100%);
 }
 
@@ -269,7 +268,7 @@ background-color: #1e1e1e; /* mismo tono que contact */
   border-radius: 50%;
 }
 
-.mail__btn{
+.mail__btn {
   width: 70px;
   height: 70px;
   font-size: 32px;
@@ -383,12 +382,18 @@ MODAL
 }
 
 .mail__btn {
-   /*position:relative;*/
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 9999;
-  
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #242424;
+  color: white;
+  position:fixed;
+  border:32px;
+  right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -544,7 +549,7 @@ MODAL
    z-index: -1;
 }
 
-.modal__overlay--loading{
+.modal__overlay--loading {
   background-color: #242424;
   font-size: 80px;
 }
@@ -707,6 +712,93 @@ margin: 28px 0;
   color: white;
 }
 
+/*
+SHAPES
+SHAPES On the firtst row
+height = 15vh
+
+shapes on the second row
+Height =70vh
+
+chapes on the third row
+height =80vh
+
+shapes on the first column  
+width= 5vw
+
+hapes on the second column
+width= 50vw
+
+hapes on the third column
+width= 80vw
+*/  
+
+.mail__btn {
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #242424;
+  color: white;
+  position: fix;
+  bottom: 32px;
+  right: 40px;
+}
+
+
+.shape {
+position: fixed;
+width: 30px;
+height: 30px;
+
+
+}
+
+.shape--0 {
+ Top: 15vh;
+ left: 5vw;
+}
+.shape--1 {
+ Top: 15vh;
+ left: 50vw;
+}
+
+.shape--2 {
+ Top: 15vh;
+ left: 80vw;
+}
+
+.shape--3 {
+ Top: 50vh;
+ left: 5vw;
+}
+
+.shape--4 {
+ Top: 50vh;
+ left: 50vw;
+}
+
+.shape--5 {
+ Top: 50vh;
+ left: 80cm;
+}
+
+.shape--6 {
+ Top: 80vh;
+ left: 5vw;
+}
+
+.shape--7 {
+ Top: 80vh;
+ left: 50vw;
+}
+
+.shape--8 {
+ Top: 80vh;
+ left: 80vw;
+}
+
 
 
 /*
@@ -719,3 +811,79 @@ MEDIA CUIERI
     align-items: center;
   }
 }
+
+
+/*small phones, talets, larges smart phones*/
+@media (max-width: 768px) {
+ 
+  .title{
+    font-size: 80px;
+  } 
+
+  .header__para {
+    font-size: 20px;
+  }
+
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius:0; 
+    }
+
+.modal {
+    align-items: center; /* CENTRA LOS DOS CUADROS */
+}
+
+.modal__about,
+.modal__contact {
+    width: 100%;
+    max-width: 400px; /* evita que se estiren demasiado */
+    margin: 0 auto;   /* los centra horizontalmente */
+}
+
+
+  .nidal__half {
+    width: 100%;
+   }
+  }
+
+
+  @media (max-width: 480px) {
+  
+    .title {
+      font-size: 52px;
+    }
+
+    .header__para {
+      font-size: 18px;
+    }
+
+     .nav__link:first-child {
+       display: none;
+    }
+
+    .project__description--para {
+      display: none;
+    }
+
+    .project__description {
+      left: 0px;
+      padding: 0 0px;
+      width: 100%;
+      text-align: center;
+    }
+
+  .project__description--sub--title {
+       margin-bottom: 8px;
+    }
+
+    .modal {
+      padding: 10px;
+      align-items: center;
+     }
+
+  }
